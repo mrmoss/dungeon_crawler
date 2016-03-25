@@ -311,13 +311,13 @@ void Glut2D::keyboardUp(unsigned char key,int x,int y)
     _keyboardDown[key]=false;
 
     //If Lower Case Update Upper Case
-    if((_keyboardDown[key]>=97||_keyboardDown[key]<=122)&&key>=32)
+    if((key>=97||key<=122)&&key>=32)
     {
         _keyboardDown[key-32]=false;
     }
 
     //If Upper Case Update Lower Case
-    if((_keyboardDown[key]>=65||_keyboardDown[key]<=90)&&key<=223)
+    if((key>=65||key<=90)&&key<=223)
     {
         _keyboardDown[key+32]=false;
     }
