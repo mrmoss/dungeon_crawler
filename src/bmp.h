@@ -13,7 +13,11 @@
 #include <fstream>
 
 //Glut Header
-#include <GL/glut.h>
+#ifdef __APPLE__
+	#include <GLUT/glut.h>
+#else
+	#include <GL/glut.h>
+#endif
 
 //Specific Input Header
 #include "specificinput.h"

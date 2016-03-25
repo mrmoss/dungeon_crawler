@@ -5,7 +5,7 @@
 #brew install glew freeglut
 
 COMPILER=g++
-FLAGS=-O
+FLAGS=-O -Wno-deprecated-declarations
 LIBS=
 
 SRC_DIR=../src

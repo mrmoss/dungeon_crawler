@@ -13,7 +13,11 @@
 #include "gamemath.h"
 
 //OpenGL Header
-#include <GL/gl.h>
+#ifdef __APPLE__
+	#include <GLUT/glut.h>
+#else
+	#include <GL/glut.h>
+#endif
 
 //Sprite Class Decalaration
 class Sprite
