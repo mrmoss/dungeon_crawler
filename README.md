@@ -24,7 +24,8 @@
 
 Description:
 
-	This is a dungeon crawler game like the old rogue-like games (hack, hackslash, etc...).  Your mission is to collect the seven lost books of a powerful wizard, without getting killed.
+	This is a dungeon crawler game like the old rogue-like games (hack, hackslash, etc...).
+	Your mission is to collect the seven lost books of a powerful wizard, without getting killed.
 
 Controls:
 
