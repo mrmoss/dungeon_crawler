@@ -1182,7 +1182,7 @@ void Dungeon::draw(const unsigned int viewWidth,const unsigned int viewHeight,co
     //Draw Menus
     for(unsigned int ii=0;ii<_heros.size();++ii)
     {
-        _heros[ii].drawMenu(_viewEntity->X()-viewWidth/2,_viewEntity->Y()-viewHeight/2,font,_numBooks);
+        _heros[ii].drawMenu(viewWidth,viewHeight,_viewEntity->X()-viewWidth/2,_viewEntity->Y()-viewHeight/2,font,_numBooks);
     }
 
     //Destroy if Need Be

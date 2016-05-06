@@ -118,7 +118,7 @@ class Hero:public Entity
         void setMenu(const bool show);
 
         //Member Draw Menu Function
-        void drawMenu(const double x,const double y,const Text& font,const int numBooks);
+        void drawMenu(const unsigned int viewWidth,const unsigned int viewHeight,const double x,const double y,const Text& font,const int numBooks);
 
         //Member Equipted Items Accessors/Mutators
         void setIArmor(Item* armor);

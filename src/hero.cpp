@@ -1212,13 +1212,13 @@ void Hero::setMenu(const bool show)
 }
 
 //Hero Class Member Draw Menu Function
-void Hero::drawMenu(const double x,const double y,const Text& font,const int numBooks)
+void Hero::drawMenu(const unsigned int viewWidth,const unsigned int viewHeight,const double x,const double y,const Text& font,const int numBooks)
 {
     //Font Draw
     if(_menuShow)
     {
-        double width=320.0;
-        double height=240.0;
+        double width=viewWidth;
+        double height=viewHeight;
 
         glPushMatrix();
         glBegin(GL_QUADS);
