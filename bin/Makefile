@@ -1,22 +1,27 @@
 #!/bin/bash
 #ubuntu
-#sudo apt-get install libglew-dev freeglut3-dev
+#sudo apt-get install freeglut3-dev
 #mac
-#brew install glew freeglut
-
-COMPILER=g++
-FLAGS=-O -Wno-deprecated-declarations
-LIBS=
+#brew install freeglut
 
 SRC_DIR=../src
+LIB_DIR=../lib
+INC_DIR=../include
+
+COMPILER=g++
+FLAGS=-O -Wno-deprecated-declarations -I $(INC_DIR)
+LIBS=
 
 ifeq ($(OS),Windows_NT)
-	#FIGURE OUT WINDOWS
+	LIBS+=-lfreeglut -lglu32 -lopengl32 -static -mwindows
+	FLAGS+=-I $(INC_DIR)/windows -m32 -L $(LIB_DIR)
 else
 	ifeq ($(shell uname),Darwin)
 		LIBS+=-framework OpenGL -framework GLUT
+		FLAGS+=-L .
 	else
-		LIBS+=-lGL -lGLU -lglut -lpthread
+		LIBS+=-lGL -lGLU -lglut
+		FLAGS+=-L $(LIB_DIR)
 	endif
 endif
 
