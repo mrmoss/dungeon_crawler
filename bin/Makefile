@@ -10,7 +10,7 @@ LIBS=
 
 SRC_DIR=../src
 
-ifeq ($(os),Windows_NT)
+ifeq ($(OS),Windows_NT)
 	#FIGURE OUT WINDOWS
 else
 	ifeq ($(shell uname),Darwin)
